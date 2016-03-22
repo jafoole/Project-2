@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sbabba.neighbourhoodguidesp1.DescriptionActivity">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    <WebView
+        android:id="@+id/locationImage"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:contentDescription="This is a image of a the location."
+        android:importantForAccessibility="no"/>
+
+
+    <TextView
+        android:id="@+id/locationName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name of Location"
+        android:textSize="30sp"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/ratingBar"
+        android:layout_alignLeft="@+id/description"
+        android:layout_alignStart="@+id/description"
+        android:contentDescription="This is the name of the location."/>
+
+
+    <TextView
+        android:id="@+id/addressView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        android:textSize="18sp"
+        android:autoLink="map"
+        android:clickable="true"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView"
+        android:contentDescription="This is the address of the location."/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_map_black_24dp"
+            android:layout_below="@+id/locationName"
+            android:layout_alignLeft="@+id/locationName"
+            android:layout_alignStart="@+id/locationName"
+            android:id="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textSize="20sp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_below="@+id/addressView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="17dp"
+        android:contentDescription="This is the description of the location."
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="29dp"
+        android:layout_marginEnd="29dp"
+        android:src="@drawable/ic_favorite_border_white_24dp"
+        android:id="@+id/fab"
+        android:layout_alignBottom="@+id/ratingBar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="28dp"
+        android:contentDescription="This floating button is so you can favorite this location."/>
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBar"
+        android:layout_below="@+id/locationImage"
+        android:layout_alignLeft="@+id/locationName"
+        android:layout_alignStart="@+id/locationName"
+        android:contentDescription="This is a rating bar so you can rate this location."/>
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Rating Value"-->
+        <!--android:id="@+id/valueOfRating"-->
+        <!--android:layout_below="@+id/ratingBar"-->
+        <!--android:layout_alignRight="@+id/fab"-->
+        <!--android:layout_alignEnd="@+id/fab" />-->
+
+    </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

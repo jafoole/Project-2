@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="60dp"
+    android:id="@+id/swipe">
+        <!-- Bottom View Start-->
+        <LinearLayout
+            android:background="#fd4030"
+            android:id="@+id/bottom_wrapper"
+            android:layout_width="160dp"
+            android:weightSum="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_delete_white_24dp"
+                android:layout_gravity="center"
+                android:id="@+id/deleteFavoriteButton"
+                android:contentDescription="This is so you can Delete the list item."/>
+
+            <!--What you want to show-->
+        </LinearLayout>
+        <!-- Bottom View End-->
+
+        <!-- Surface View Start -->
+        <LinearLayout
+            android:padding="10dp"
+            android:background="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--What you want to show in SurfaceView-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textSurfaceView"
+                android:text="test"
+                android:textSize="20sp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+        <!-- Surface View End -->
+    </com.daimajia.swipe.SwipeLayout>
